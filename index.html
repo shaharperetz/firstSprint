@@ -16,21 +16,29 @@
 
 
 
-    <h1> Mines Sweepers</h1>
+    <h1><img class="ballImg" src="img/2.png" alt=""> Mine Sweeper<img class="ballImg" src="img/2.png" alt=""></h1>
+
+    <img onclick="restart()" class="random" src="img/normal.png" alt="">
+    <img class="sad" src="img/sad.png" alt="">
+    <img class="happy" src="img/sunglass.png" alt="">
+
+
+
     <div class="big">
         <span class="choices big" onclick="easy()">Beginner</span>
         <span class="choices" onclick="medium()">Medium</span>
         <span class="choices" onclick="hard()">Expert</span>
     </div>
 
-
+    <div class="h1">
+        <span class="popup">be carefull !! it`s a BOMB !!</span>
+    </div>
 
     <div class="h1">
         <span class="hint h1" onclick="changeToHint(this)">Hint</span>
         <span class="hint h2" onclick="changeToHint(this)">Hint</span>
         <span class="hint h3" onclick="changeToHint(this)">Hint</span>
     </div>
-
 
 
     <table>
@@ -44,8 +52,17 @@
 
 
 
+
+    <div class="hearts">
+        <span> <img class="heart heart1" src="img/heart.png" alt=""></span>
+        <span> <img class="heart heart2" src="img/heart.png" alt=""></span>
+        <span> <img class="heart heart3" src="img/heart.png" alt=""></span>
+    </div>
     <div class="clock">000</div>
     <button class="btn" onclick="restart()">restart</button>
+
+
+
     <script src="js/utils.js"></script>
     <script src="js/mines.js"></script>
     <script src="js/game.js"></script>

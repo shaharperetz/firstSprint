@@ -91,11 +91,19 @@ function openSpaceToHint(cellI, cellJ, mat) {
         for (var j = cellJ - 1; j <= cellJ + 1; j++) {
             if (i === cellI && j === cellJ) continue;
             if (j < 0 || j >= mat[i].length) continue;
-
             renderCellForOpen(i, j)
 
 
         }
 
     }
+}
+
+
+function popUpLifeDown() {
+    var popup = document.querySelector('.popup')
+    popup.style.display = 'block'
+    setTimeout(() => {
+        popup.style.display = 'none'
+    }, 1200);
 }
