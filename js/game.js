@@ -21,8 +21,6 @@ var gGame = {
 
 
 function init() {
-    getHeartsBack()
-    gLifes = 0
     gGame.isOn = false
     gGame.secPassed = 000
     gGame.markedCount = 0
@@ -37,13 +35,6 @@ function init() {
 
 
 
-}
-
-function getHeartsBack() {
-    var elLife = document.querySelectorAll('.heart')
-    elLife[0].style.display = ''
-    elLife[1].style.display = ''
-    elLife[2].style.display = ''
 }
 
 function buildBoard() {
@@ -121,7 +112,6 @@ function renderBoard(board) {
 
 
 function gameOver(win) {
-    var elNormalFace = document.querySelector('.random')
     if (win === false) {
         var elTbody = document.querySelectorAll('.hide')
         for (var i = 0; i < elTbody.length; i++) {
@@ -130,49 +120,25 @@ function gameOver(win) {
         var button = document.querySelector('.btn')
         button.style.display = 'block'
         myStopWatch()
-        var sadFace = document.querySelector('.sad')
-        elNormalFace.style.display = 'none'
-        sadFace.style.display = 'flex';
-        // setTimeout(() => {
-        //     sadFace.style.display = 'none'
-        // }, 3000);
 
-
-    } else if (win === true) {
+    } else if (win === true)
         alert('Victory')
-        var elTbody = document.querySelectorAll('.hide')
-        for (var i = 0; i < elTbody.length; i++) {
-            elTbody[i].classList.remove('hide')
-        }
-        var button = document.querySelector('.btn')
-        button.style.display = 'block'
-        myStopWatch()
-        var happyFace = document.querySelector('.happy')
-        elNormalFace.style.display = 'none'
-        happyFace.style.display = 'flex'
-
-
-
+    var elTbody = document.querySelectorAll('.hide')
+    for (var i = 0; i < elTbody.length; i++) {
+        elTbody[i].classList.remove('hide')
     }
+    var button = document.querySelector('.btn')
+    button.style.display = 'block'
+    myStopWatch()
+
 }
 
 function restart() {
-    var elNormalFace = document.querySelector('.random')
     gClickCounter = 0;
     init()
     var button = document.querySelector('.btn')
     button.style.display = 'none';
     myStopWatch()
-    var allHints = document.querySelectorAll('.hint')
-    allHints[0].style.display = '';
-    allHints[1].style.display = '';
-    allHints[2].style.display = '';
-    var happyFace = document.querySelector('.happy')
-    var sadFace = document.querySelector('.sad')
-    happyFace.style.display = 'none'
-    sadFace.style.display = 'none'
-    elNormalFace.style.display = ''
-
 
 }
 

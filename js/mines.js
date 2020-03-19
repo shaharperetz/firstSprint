@@ -2,7 +2,6 @@ const X = '💣'
 const flag = '🚩';
 const flag2 = '🚩 ';
 const empty = '';
-var gLifes = 0;
 
 var gCellObject = {
 
@@ -13,6 +12,14 @@ var gCellObject = {
 
 }
 
+
+
+// function createMines() {
+//     var first = [0, 1, 2, 3, 4, 5, 6, 7];
+//     var second = [0, 1, 2, 3, 4, 5, 6, 7];
+//     for (var i = 0; i < gLevel.MINES; i++) {
+//         var x = first.splice(getRandomInt(0, first.length), 1)
+//         var y = second.splice(getRandomInt(0, second.length), 1)
 
 function createMines() {
 
@@ -29,22 +36,9 @@ function createMines() {
 
 
 function cellClicked(elCell, cellI, cellJ) {
-    var elLife = document.querySelectorAll('.heart')
     if (!gIsHint) {
-        if (gBoard[cellI][cellJ] === X && gLifes === 2) {
+        if (gBoard[cellI][cellJ] === X) {
             gameOver(false)
-            elLife[gLifes].style.display = 'none'
-        } else if (gBoard[cellI][cellJ] === X && gLifes !== 3) {
-            elLife[gLifes].style.display = 'none'
-            gLifes++
-            var elNormalFace = document.querySelector('.random')
-            var sadFace = document.querySelector('.sad')
-            elNormalFace.style.display = 'none'
-            sadFace.style.display = 'flex';
-            setTimeout(() => {
-                elNormalFace.style.display = 'flex'
-                sadFace.style.display = 'none';
-            }, 2000);
         } else if (gBoard[cellI][cellJ] === empty) {
             elCell.classList.remove('hide');
             openSpace(cellI, cellJ, gBorad)
@@ -159,11 +153,6 @@ function easy() {
     gLevel.SIZE = 4
     gLevel.MINES = 2
     gClickCounter = 0
-    myStopWatch()
-    var allHints = document.querySelectorAll('.hint')
-    allHints[0].style.display = '';
-    allHints[1].style.display = '';
-    allHints[2].style.display = '';
     init()
 }
 
@@ -171,11 +160,6 @@ function medium() {
     gLevel.SIZE = 8
     gLevel.MINES = 12
     gClickCounter = 0
-    myStopWatch()
-    var allHints = document.querySelectorAll('.hint')
-    allHints[0].style.display = '';
-    allHints[1].style.display = '';
-    allHints[2].style.display = '';
     init()
 }
 
@@ -183,10 +167,5 @@ function hard() {
     gLevel.SIZE = 12
     gLevel.MINES = 30
     gClickCounter = 0
-    myStopWatch()
-    var allHints = document.querySelectorAll('.hint')
-    allHints[0].style.display = '';
-    allHints[1].style.display = '';
-    allHints[2].style.display = '';
     init()
 }

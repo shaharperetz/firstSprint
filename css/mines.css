@@ -5,15 +5,14 @@
         h1 {
             text-align: center;
             color: white;
-            margin-bottom: 45px;
-            background-color: black;
+            margin-top: 30px;
+            margin-bottom: 90px;
         }
         
         .hide {
             background-color: black;
             color: black;
-            text-indent: -9999px;
-            border-radius: 5px;
+            text-indent: -9999px
         }
         
         .board td {
@@ -24,8 +23,6 @@
             transition: .5s;
             color: black;
             border: 2px solid;
-            border-radius: 2px;
-            position: relative;
         }
         
         .btn {
@@ -34,7 +31,6 @@
             width: 120px;
             background-color: gray;
             border-radius: 5px;
-            margin-top: 20px;
         }
         
         .btn:hover {
@@ -52,7 +48,7 @@
         }
         
         .choices {
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             margin-left: 40px;
             display: inline-block;
             height: 40px;
@@ -65,121 +61,31 @@
         
         .choices:hover {
             cursor: pointer;
-            background-color: transparent;
-            font-weight: bold;
-            font-style: italic;
-            color: royalblue;
-            /* font-size: 25px; */
         }
         /* *********************************************** */
         
         .hint {
-            position: relative;
+            margin-bottom: 25px;
+            margin-left: 40px;
+            display: inline-block;
             height: 40px;
             background-color: gray;
             border-radius: 6px;
             text-align: center;
             padding-top: 15px;
-            width: 1000px;
-            text-align: center;
-            align-items: center;
-            background-color: midnightblue;
-            margin: 0 auto;
-            width: 60px;
-            display: inline-block;
-            margin-bottom: 20px;
-            color: wheat;
-        }
-        
-        .hint:hover {
-            cursor: pointer;
-            background-color: transparent;
-            color: royalblue;
+            width: 90px;
         }
         
         .h1 {
+            display: inline-block;
             text-align: center;
             align-items: center;
         }
         
         .h2 {
-            text-align: center;
-            align-items: center;
+            display: inline-block;
         }
         
         .h3 {
-            text-align: center;
-            align-items: center;
-        }
-        
-        .ballImg {
-            height: 40px;
-            margin-right: -10px;
-            margin-top: 5px;
-        }
-        
-        .random {
-            margin: auto;
-            align-items: center;
-            height: 40px;
-            display: flex;
-            margin-bottom: 25px;
-        }
-        
-        .happy {
-            margin: auto;
-            align-items: center;
-            height: 40px;
-            display: none;
-            margin-bottom: 25px;
-        }
-        
-        .sad {
-            margin: auto;
-            align-items: center;
-            height: 40px;
-            display: none;
-            margin-bottom: 25px;
-        }
-        
-        .clock {
-            position: relative;
-            margin: auto;
-            height: 50px;
-            width: 100px;
-            background-color: royalblue;
-            font-size: 40px;
-            text-align: center;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        
-        .heart {
-            width: 25px;
-            text-align: center;
-            align-items: center;
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-        
-        .hearts {
-            margin: auto;
-            text-align: center;
-            margin-top: 15px;
-        }
-        /* **********************all hearts********************* */
-        
-        .heart1 {
-            text-align: center;
-            align-items: center;
-        }
-        
-        .heart2 {
-            text-align: center;
-            align-items: center;
-        }
-        
-        .heart3 {
-            text-align: center;
-            align-items: center;
+            display: inline-block;
         }
